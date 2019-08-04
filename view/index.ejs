@@ -1,0 +1,26 @@
+<%- include('componentes/Header') %>
+<div class="container">
+  <table class="table table-hover table-striped table-dark">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Street</th>
+            <th scope="col">Lat</th>
+        </tr>
+    </thead>
+     <tbody>
+        <% users.forEach(({ name,address:{ street,geo:{ lat }} }) => { %>
+            <tr>
+                <th scope="row">1</th>
+                <td><%= name %></td>
+                <td><%= street %></td>
+                <td><%= lat %></td>
+            </tr>
+        <% }); %>
+    </tbody>
+    </table>
+    </div>
+    <%- include('componentes/Footer') %>
+</body>
+</html>
